@@ -14,7 +14,7 @@ pool:
 steps:
 - script: |
     echo PR PR PR PR PR PR pipeline triggered
-    echo ----------------------------------------------------------------
+    echo ------------------------ test 1 ----------------------------------------
     echo  
     echo $(Build.Reason)
 
