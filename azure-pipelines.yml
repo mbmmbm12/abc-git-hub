@@ -16,6 +16,9 @@ pool:
 steps:
 - script: |
     echo Hello, world!
+    echo ================================================================
+    echo  
+    echo $(Build.Reason)
     ls -la
     pwd
   displayName: 'Run a one-line script'
