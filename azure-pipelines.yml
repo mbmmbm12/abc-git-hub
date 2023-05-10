@@ -4,13 +4,20 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+  branches:
+    include:
+    - '*'
+    exclude:
+    - main
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
+- script: |
+    echo Hello, world!
+    ls -la
+    pwd
   displayName: 'Run a one-line script'
 
 - script: |
