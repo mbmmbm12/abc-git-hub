@@ -19,7 +19,8 @@ steps:
     echo ------------------------ test 1 1 ----------------------------------------
     echo  
     echo $(Build.Reason)
-
+    echo Build SourceBranch - $(Build.SourceBranch)
+    echo Build SourceBranchName - $(Build.SourceBranchName)
     ls -la
     pwd
   displayName: 'Run a one-line script'
