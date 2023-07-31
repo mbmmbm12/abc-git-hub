@@ -33,3 +33,28 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+#- name: addMessage
+#  ${{ if eq(variables['Build.Reason'], 'Manual') }}:
+#    value: $(Date:yyyyMMdd).$(Rev:r) Manual Build, version ${{parameters.artifactVersionOption}}_${{variables.stringBuildVersion}}
+#  ${{ else }}:
+#    value: ''
+
+  #- task: SonarQubePrepare@5
+  #  condition: or( and(succeeded(), eq(${{parameters.toAzureArtifacts}}, true)), and(succeeded(), eq(variables['Build.Reason'], 'PullRequest')) )
+  #  displayName: 'Prepare analysis configuration'
+  #  inputs:
+  #    SonarQube: 'SonarQubeSC'
+  #    scannerMode: 'MSBuild'
+  #    ProjectKey: 'prj_key_EGYESJ'
+  #    projectName: 'prjName'
+  #    extraproperties: |
+  #      sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
+  #      sonar.cs.cobertura.reportPaths=$(Agent.TempDirectory)/**/*.coverage
+
+
+# restore, build, unit test, test if PR or main, publish if main, 
+# DMO logic
+#
+#
+#
